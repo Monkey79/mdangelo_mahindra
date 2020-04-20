@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Hello World (Thymeleaf)</title>
+
+</head>
+	<body>
+		<h1>Files:</h1>
+		<table border="1">
+			<tr>
+				<th>Path</th>
+				<th>Result</th>
+				<th>Creation Date</th>
+			</tr>
+			<tr th:each="file : ${files}">
+				<td th:text="${file.path}"></td>
+				<td th:text="${file.result}"></td>
+				<td th:text="${file.creationDate}"></td>			
+			</tr>
+		</table>	
+	</body>
+</html>
